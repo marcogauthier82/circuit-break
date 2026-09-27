@@ -1,0 +1,17 @@
+{
+  "name": "circuit-break",
+  "version": "0.1.0",
+  "description": "half-open probing for a circuit breaker",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
