@@ -54,3 +54,10 @@ The trade-off: the breaker is pull-driven. There is no background timer. The OPE
 - `State` — frozen enum with `CLOSED`, `OPEN`, `HALF_OPEN`.
 
 Methods: `allow()` returns `boolean`. `success()` and `failure()` return `undefined`. `reset()` forces CLOSED. `state` is a getter that performs the lazy OPEN-to-HALF_OPEN transition.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
