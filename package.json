@@ -1,6 +1,6 @@
 {
   "name": "circuit-break",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "half-open probing for a circuit breaker",
   "type": "module",
   "main": "src/index.js",
